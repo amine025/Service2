@@ -10,15 +10,14 @@
 DROP TABLE client;
 CREATE TABLE client
 (
-
-    id INTEGER(10)AUTO_INCREMENT,
-    nom VARCHAR(50) NOT NULL,
-    prenom VARCHAR(50) NOT NULL,
-    ddn VARCHAR(50) NOT NULL,
+    id_client INTEGER AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    birth_day VARCHAR(50) NOT NULL,
     username VARCHAR(50)NOT NULL,
     machine_name VARCHAR(50)NOT NULL,
-    time_stamp  TIMESTAMP DEFAULT NOW(),
-    CONSTRAINT id_client_client_PK PRIMARY KEY (id)
+    time_stamp  VARCHAR(50),
+    CONSTRAINT id_client_client_PK PRIMARY KEY (id_client)
 );
 
 /*

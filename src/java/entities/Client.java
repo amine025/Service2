@@ -1,5 +1,5 @@
 package entities;
-// Generated 2018-10-23 15:07:03 by Hibernate Tools 4.3.1
+// Generated 2018-10-24 18:04:28 by Hibernate Tools 4.3.1
 
 
 
@@ -9,29 +9,68 @@ package entities;
 public class Client  implements java.io.Serializable {
 
 
-     private int idClient;
+     private Integer idClient;
+     private String firstName;
+     private String lastName;
+     private String birthDay;
+     private String username;
      private String machineName;
      private String timeStamp;
-     private int birthDay;
-     private String userName;
 
     public Client() {
     }
 
-    public Client(int idClient, String machineName, String timeStamp, int birthDay, String userName) {
-       this.idClient = idClient;
+	
+    public Client(String firstName, String lastName, String birthDay, String username, String machineName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDay = birthDay;
+        this.username = username;
+        this.machineName = machineName;
+    }
+    public Client(String firstName, String lastName, String birthDay, String username, String machineName, String timeStamp) {
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.birthDay = birthDay;
+       this.username = username;
        this.machineName = machineName;
        this.timeStamp = timeStamp;
-       this.birthDay = birthDay;
-       this.userName = userName;
     }
    
-    public int getIdClient() {
+    public Integer getIdClient() {
         return this.idClient;
     }
     
-    public void setIdClient(int idClient) {
+    public void setIdClient(Integer idClient) {
         this.idClient = idClient;
+    }
+    public String getFirstName() {
+        return this.firstName;
+    }
+    
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return this.lastName;
+    }
+    
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getBirthDay() {
+        return this.birthDay;
+    }
+    
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
+    }
+    public String getUsername() {
+        return this.username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
     }
     public String getMachineName() {
         return this.machineName;
@@ -46,20 +85,6 @@ public class Client  implements java.io.Serializable {
     
     public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
-    }
-    public int getBirthDay() {
-        return this.birthDay;
-    }
-    
-    public void setBirthDay(int birthDay) {
-        this.birthDay = birthDay;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-    
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
 
