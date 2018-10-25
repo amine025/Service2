@@ -33,7 +33,7 @@ public class TraitementServlet extends HttpServlet {
             throws ServletException, IOException {
         
         ClientService service = new ClientService();
-        service.persistFromJson("{\"firstName\":\"Amine\",\"lastName\":\"Ghodbane\",\"birthDay\":1990,\"username\":\"1895101\",\"machineName\":\"LI-H023-0T15\"}");
+        service.persistFromJson("{\"birthDay\":1990,\"username\":\"1895101\",\"machineName\":\"LI-H023-0T15\"}");
         RequestDispatcher disp = request.getRequestDispatcher("/index.jsp");
         disp.forward(request, response);
     }

@@ -1,5 +1,5 @@
 package entities;
-// Generated 2018-10-24 18:04:28 by Hibernate Tools 4.3.1
+// Generated 2018-10-24 20:03:10 by Hibernate Tools 4.3.1
 
 
 
@@ -10,8 +10,6 @@ public class Client  implements java.io.Serializable {
 
 
      private Integer idClient;
-     private String firstName;
-     private String lastName;
      private String birthDay;
      private String username;
      private String machineName;
@@ -21,16 +19,12 @@ public class Client  implements java.io.Serializable {
     }
 
 	
-    public Client(String firstName, String lastName, String birthDay, String username, String machineName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Client(String birthDay, String username, String machineName) {
         this.birthDay = birthDay;
         this.username = username;
         this.machineName = machineName;
     }
-    public Client(String firstName, String lastName, String birthDay, String username, String machineName, String timeStamp) {
-       this.firstName = firstName;
-       this.lastName = lastName;
+    public Client(String birthDay, String username, String machineName, String timeStamp) {
        this.birthDay = birthDay;
        this.username = username;
        this.machineName = machineName;
@@ -43,20 +37,6 @@ public class Client  implements java.io.Serializable {
     
     public void setIdClient(Integer idClient) {
         this.idClient = idClient;
-    }
-    public String getFirstName() {
-        return this.firstName;
-    }
-    
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    public String getLastName() {
-        return this.lastName;
-    }
-    
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
     public String getBirthDay() {
         return this.birthDay;

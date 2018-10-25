@@ -11,8 +11,6 @@ DROP TABLE client;
 CREATE TABLE client
 (
     id_client INTEGER AUTO_INCREMENT,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
     birth_day VARCHAR(50) NOT NULL,
     username VARCHAR(50)NOT NULL,
     machine_name VARCHAR(50)NOT NULL,
@@ -21,5 +19,5 @@ CREATE TABLE client
 );
 
 /*
-{"nom":"Ghodbane","prenom":"Amine","ddn":1950,"username":"1895101","machineName":"LI-H023-0T04"}
+{"birthDay":1950,"username":"1895101","machineName":"LI-H023-0T04"}
 */
