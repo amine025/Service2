@@ -2,6 +2,7 @@ package service;
 
 import dao.ClientDao;
 import entities.Client;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientService {
@@ -20,7 +21,10 @@ public class ClientService {
 
     public void persistFromJson(String infosJson) {
         clientDao.openCurrentSessionwithTransaction();
-        clientDao.persist(Gestionnaire.getClientFromJson(infosJson));
+        ArrayList<Client> clients = Gestionnaire.getClientFromJson(infosJson);
+        for(Client client : clients){
+            clientDao.persist(client);
+        }
         clientDao.closeCurrentSessionwithTransaction();
     }
 

@@ -7,6 +7,7 @@ package service;
 
 import com.google.gson.Gson;
 import entities.Client;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,16 +15,15 @@ import entities.Client;
  */
 public class Gestionnaire {
     
-    private static Client client;
+    private static ArrayList<Client> clients;
     
     public Gestionnaire(){
         
     }
     
-    public static Client getClientFromJson(String jsonInfos){
+    public static ArrayList<Client> getClientFromJson(String jsonInfos){
         Gson gson = new Gson();
-        client = gson.fromJson(jsonInfos, Client.class);
-        return client;
+        clients = gson.fromJson(jsonInfos, ArrayList.class);
+        return clients;
     }
-    
 }
